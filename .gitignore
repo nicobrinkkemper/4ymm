@@ -1,5 +1,6 @@
 *.Identifier
 !/.gitignore
+.history
 
 scripts/levelImages
 scripts/makerImages
