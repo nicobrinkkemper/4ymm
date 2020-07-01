@@ -22,8 +22,6 @@ import YouTube from 'react-youtube';
 import About from 'About';
 import Teaser from 'Teaser';
 
-import FullStory from 'react-fullstory';
- 
 const FS_ORG_ID = 'W54CA'; // Fill this in here
 const FS_NAMESPACE = 'FULLSTORY'; // Fill this in here
 
@@ -143,7 +141,7 @@ function App() {
     )
   return (
     <div className="App" style={showAbout ? { overflowY: 'hidden', maxHeight: '100vh' } : {}}>
-      <FullStory org={FS_ORG_ID} namespace={FS_NAMESPACE} />
+      
       <div className="ie-fixMinHeight">
         {routes}
         <About />
