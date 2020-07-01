@@ -3,6 +3,12 @@
 ## Prerequisites
 - Have `npm` installed. It comes with Node.js which you can install from their site https://nodejs.org/en/
 
+## Installing
+
+- `npm install` - install all dependencies in `node_modules`
+- `npm run start` - run development mode
+- OR `npm run build` - build final product in `build folder`
+
 ## General information about the source code
 
 See below `Available Scripts` to get you up and running. These scripts correspond to the ones specified in `package.json`. A few things to keep in mind before starting the work on the project:
