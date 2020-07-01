@@ -1,0 +1,24 @@
+.mii{
+    align-self: center;
+    justify-self: center;
+    flex:1 0 0;
+}
+.makerDescription{
+    padding-top:1rem;
+}
+
+.Batch .levelInfo{
+    display:flex;
+}
+.Batch .makerInfo{
+    display: flex;
+    flex:1 0 0;
+    text-align: left;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Batch .makerName {
+    font-size: 0.77777777777rem;
+    flex:1 0 0;
+}

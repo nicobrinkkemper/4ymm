@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background: url('bg.png') repeat;
+  background-size: 512px 512px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Super-Mario-Maker-Extended.eot'); /* IE9 Compat Modes */
+  src: local('Super MarioMaker Extended'), local('SuperMarioMakerExtended'),
+       url('./fonts/Super-Mario-Maker-Extended.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Super-Mario-Maker-Extended.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/Super-Mario-Maker-Extended.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/Super-Mario-Maker-Extended.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/Super-Mario-Maker-Extended.svg#SuperMarioMakerExtended') format('svg'); /* Legacy iOS */
+}
+body {
+  font-family: 'Open Sans';
+}

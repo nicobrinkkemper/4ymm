@@ -1,0 +1,12 @@
+.Batch{
+    display: flex;
+    flex-flow: column;
+}
+
+.Batch .Card{
+    padding:.5rem;
+    flex-flow: row;
+}
+.Batch .Card picture{
+    display:flex;
+}

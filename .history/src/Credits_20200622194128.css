@@ -1,0 +1,28 @@
+.Credits .Card{
+    text-align: left;
+}
+.Credits .Card h2{
+    font-size: 1rem;
+    line-height: 1.125rem;
+}
+.Credits .Card dl{
+    display: grid;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    padding-bottom: 2rem;
+}
+.Credits .Card dl dt{
+    font-size: .875rem;
+    line-height: 1.125rem;
+    font-weight: bold;
+    height:1.125rem;
+}
+.Credits .Card dl dt + dd {
+    grid-template-rows: 2;
+}
+.Credits .Card dl dd{
+    font-size: 1rem;
+    line-height: 1.125rem;
+    height:1.125rem
+    
+}

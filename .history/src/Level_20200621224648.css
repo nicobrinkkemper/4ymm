@@ -1,0 +1,43 @@
+.mii{
+    align-self: center;
+    justify-self: center;
+    flex:1 0 0;
+}
+.makerDescription{
+    padding-top:1rem;
+}
+
+.Level .levelInfo{
+    display:flex;
+}
+.Level .levelName{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.Level .makerInfo{
+    display: flex;
+    flex:1 0 0;
+    text-align: left;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Level .makerName {
+    font-size: 0.77777777777rem;
+    flex:1 0 0;
+    margin-top:.45rem;
+}
+.Level .nationality{
+    margin-right:.45rem;
+}
+.Level .Card picture{
+    display: flex;
+}
+.Level .levelCode{
+    font-size:1rem;
+    background: #C60034;
+    border-radius: 0px 0px .25rem .25rem;
+    color:white;
+    padding:1rem;
+    margin-bottom:1rem;;
+}

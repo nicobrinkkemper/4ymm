@@ -1,0 +1,55 @@
+.Batch{
+    display: flex;
+    flex-flow: column;
+}
+
+.Batch .Card{
+    padding:.5rem;
+}
+.Batch .LevelCard{
+    display:flex;
+    flex-flow: row;
+}
+.LevelCard .levelName{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.makerInfo{
+    flex:1 0 0;
+    text-align: left;
+    padding:.5rem .85rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.levelInfo{
+
+}
+.makerName {
+    font-size: 0.77777777777rem;
+    flex:1 0 0;
+}
+.Batch .Card picture{
+    display:flex;
+}
+.Batch .Card picture img {
+    border-radius: .25rem;
+}
+.Batch .nationality{
+    margin-right:.45rem;
+}
+
+.Batch .difficulty{
+    font-size: .75rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.tags {
+  
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .3rem;
+  }

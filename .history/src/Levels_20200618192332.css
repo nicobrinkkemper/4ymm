@@ -1,0 +1,42 @@
+.Batch{
+    display: flex;
+    flex-flow: row;
+}
+.Batch .batchNumber{
+    display: flex;
+    border-radius: 50%;
+    height:2.4375rem;
+    width:2.4375rem;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: #FACD00;
+    margin:0 .875rem 0 0;
+    font-family: 'SuperMario', sans-serif;
+}
+.Batch .batchNumber.isNew {
+    background-color: #F7941D;
+}
+.Batch .releaseInfo{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between
+}
+.Batch .releaseDay {
+    font-size:1rem;
+    line-height: 1.125rem;
+}
+.Batch .batchLevelAmount{
+    font-size:.875rem;
+    line-height: 1rem;
+}
+
+.Batch .new{
+
+}
+.Batch .unreleased{
+    
+}

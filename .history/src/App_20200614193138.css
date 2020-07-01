@@ -1,0 +1,121 @@
+.ie-fixMinHeight {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  /* Center vertically */
+  align-items: center;
+
+  /*Center horizontaly */
+  justify-content: center;
+
+  /*Center horizontaly ie */
+  -ms-flex-pack: center;
+
+  min-height:100vh;
+}
+
+.App {
+  display:flex;
+  align-items: center;
+  -ms-align-items: column;
+  justify-content: center;
+  -ms-justify-content: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  text-align: center;
+  background: url('bg.png') repeat;
+  background-size: 512px 512px;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  padding-bottom:2em;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top:2em;
+}
+.App-body {
+  width:34.25rem;
+  max-width:90vw;
+  flex-grow:1;
+}
+.App-link {
+  color: #61dafb;
+}
+
+
+
+header{
+  max-width: 30em;
+}
+.youtubeWrapper{
+  flex:1;
+}
+.youtubeContainer{
+  flex:1;
+  max-width:100vw;
+  overflow:hidden;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border:1px solid black;
+  background:black;
+}
+.youtubeContainer iframe, .youtubeContainer object, .youtubeContainer embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.countdown{
+  width:minmax(90vw,30em);
+  line-break: loose;
+  
+  padding-top:1em;
+  display:grid;
+  grid-auto-columns: auto;
+  column-gap: .5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 450px) {
+  .countdown {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 160px) {
+  .countdown {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copy{
+  padding-top:2em;
+  padding-bottom:1em;
+}
+
+
+body,html {
+  font-family: 'SuperMarioMakerExtended';
+  width:100%;
+  overflow-x: hidden;
+}
+#root, .App{
+  width:100%;
+  position: relative;
+}

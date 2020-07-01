@@ -1,0 +1,29 @@
+.Batch{
+    display: flex;
+    flex-flow: column;
+}
+
+.Batch .Card{
+    padding:.5rem;
+}
+.Batch .LevelCard{
+    display:flex;
+    flex-flow: row;
+}
+.LevelCard .levelName{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+.makerInfo{
+    padding:1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.makerName {
+    font-size: 0.875rem;
+}
+.Batch .Card picture{
+    display:flex;
+}

@@ -1,0 +1,23 @@
+.Batch{
+    display: flex;
+    flex-flow: column;
+}
+
+.Batch .Card{
+    padding:.5rem;
+}
+.Batch .LevelCard{
+    display:flex;
+    flex-flow: row;
+}
+.LevelCard .levelName{
+    padding:1rem;
+}
+.makerInfo{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+.Batch .Card picture{
+    display:flex;
+}

@@ -1,0 +1,8 @@
+.mii{
+    align-self: center;
+    justify-self: center;
+    flex:1 0 0;
+}
+.makerDescription{
+    padding-top:1rem;
+}

@@ -1,0 +1,78 @@
+.Batch{
+    display: flex;
+    flex-flow: row;
+}
+.Card a {
+    display:flex;
+    color:inherit;
+    text-decoration: none;
+}
+.Card{
+    position: relative;
+}
+.Card .Clickable{
+    cursor: pointer;
+    height:100%;
+    width:100%;
+}
+.Card .Clickable:before{
+    content:'';
+    position: absolute;
+    top:0;left:0;width:100%;height:100%;
+}
+.Batch .batchNumber{
+    display: flex;
+    border-radius: 50%;
+    height:2.4375rem;
+    width:2.4375rem;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: #FACD00;
+    margin:0 .875rem 0 0;
+    font-family: 'SuperMario', sans-serif;
+}
+.Batch .batchNumber.isNew {
+    background-color: #F7941D;
+}
+.Batch .releaseInfo{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1 0 0;
+}
+.Batch .releaseDay {
+    font-size:1rem;
+    line-height: 1.125rem;
+}
+.Batch .batchLevelAmount{
+    font-size:.875rem;
+    line-height: 1rem;
+}
+.Batch.isUnreleased .batchNumber{
+    background-color: #C4C4C4;
+    color:inherit
+}
+.Batch.isNew .batchNumber{
+    background-color: #F7941D;
+}
+.Batch .new, .Batch.isUnreleased .unreleased{
+    line-height: .8125rem;
+    border-radius: .25rem;
+    font-size:.75rem;
+    height:1.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding:.25rem .5rem;
+}
+.Batch.isNew .new{
+    background-color: #F7941D;
+    color:white;
+}
+.Batch .unreleased{
+    background-color: #CCCCCC;
+}

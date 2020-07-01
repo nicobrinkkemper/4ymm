@@ -1,0 +1,163 @@
+/* RESET DEFAULT HTML STYLING */
+* {
+  padding:0; margin:0;
+  box-sizing: border-box;
+}
+
+
+body,html,#root,.App {
+  width:100%;
+}
+
+#root, .App{
+  position: relative;
+  overflow-x: auto;
+}
+
+
+h1{
+  text-align: left;
+  padding:0 0 1rem 0;
+  line-height: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+p{
+  padding-bottom:.75rem;
+  text-align: left;
+  letter-spacing: -.03rem;
+}
+p>strong{
+  font-size: 1rem;
+  font-weight: normal;
+}
+p{
+  font-size: .875rem;
+}
+
+.Logo {
+  width: calc(100vw - 2em);
+  max-width: 30rem;
+  pointer-events: none;
+}
+
+/* COMPONENTS */
+.Card {
+  padding:1.3125rem;
+  margin: 0 0 2rem 0;
+  width: calc(100vw - 2em);
+  max-width: 30rem;
+  background-color: #FFEFAD;
+  min-width:10rem;
+  border-radius: 0.25rem;
+}
+.Card.hasIllustration {
+
+}
+.Card.hasIllustration .Illustration{
+  float:right;
+  width: 6em;
+}
+.Card.hasIllustration p{
+}
+.Card.hasIllustration p+p{
+}
+.Card.hasIllustration a{
+}
+
+
+@media only screen and (min-width: 620px) {
+  .Card{
+    min-width: 34.25rem;
+  }
+  .Button{
+    max-width: 12.6875rem;
+  }
+}
+
+.Button{
+  font-family: 'SuperMarioMakerExtended';
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
+  align-items: center;
+  width:100%;
+  justify-content: center;
+  cursor:pointer;
+  background-color: #F7941D;
+  color:white;
+  text-decoration: none;
+  font-size:1rem;
+  line-height: 1.125rem;
+  font-weight: normal;
+  border:none;
+  padding:.875rem 0 .875rem 0;
+  box-shadow: 0px .25rem .25rem rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+}
+.Button.primary{
+  background-color: #C60034;
+}
+.Button .Icon {
+  margin-left:.75rem;
+  margin-right:-.25rem;
+  height:1rem;
+  width:1rem;
+}
+.Button .Icon.folder,
+.Button .Icon.play-button{
+  height:1.5rem;
+  width:1.5rem;
+}
+.Button .Icon.arrow-right{
+  height:1.125rem;
+  width:1.125rem;
+}
+
+/* TYPOGRAPHY */
+
+body {
+  font-family: 'SuperMarioMakerExtended', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:16px;
+  line-height: 1.125rem;
+  color:#333333;
+}
+@media only screen and (min-width: 620px) {
+  html,body{
+    font-size:18px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+@font-face {
+font-family: 'SuperMarioMakerExtended';
+font-style: normal;
+font-weight: 400;
+src: url('./fonts/SuperMarioMakerExtended.eot'); /* IE9 Compat Modes */
+src: local('Super-Mario-Maker-Extended'), local('SuperMarioMakerExtended'),
+     url('./fonts/SuperMarioMakerExtended.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('./fonts/SuperMarioMakerExtended.woff2') format('woff2'), /* Super Modern Browsers */
+     url('./fonts/SuperMarioMakerExtended.woff') format('woff'), /* Modern Browsers */
+     url('./fonts/SuperMarioMakerExtended.ttf') format('truetype'), /* Safari, Android, iOS */
+     url('./fonts/SuperMarioMakerExtended.svg#SuperMarioMakerExtended') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'SuperMario';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/SuperMario.eot'); /* IE9 Compat Modes */
+  src: local('Super-Mario-Maker-Extended'), local('SuperMario'),
+       url('./fonts/SuperMarioMakerExtended.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/SuperMarioMakerExtended.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/SuperMarioMakerExtended.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/SuperMarioMakerExtended.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/SuperMarioMakerExtended.svg#SuperMarioMakerExtended') format('svg'); /* Legacy iOS */
+  }

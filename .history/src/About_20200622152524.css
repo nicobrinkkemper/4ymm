@@ -1,0 +1,20 @@
+
+.Modal-wrapper{
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    height:100%;width:100%;
+    background-color: rgba(0,0,0,.5);
+}
+.About {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.About-body{
+    max-width:17rem;
+    background-color: #FACD00;
+    height:100%;
+    width:100%;
+}
