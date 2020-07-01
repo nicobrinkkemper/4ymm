@@ -19,7 +19,7 @@ See below `Available Scripts` to get you up and running. These scripts correspon
 
 - `Craco` is used to *hack* `create-react-app` to enable `.csv` reading abilities, allowing us to statically read the `.csv` contents as it would be a `.json` file. This eliminates any asynchronous loading of data, and let's us do static rendering of pages to `.html` files.
 
-- Changes to files in `src/data` will not be reflected in development mode. However you do not have to restart the process of `npm run start`, you can simply do a save command on any of the `.ts` or `.tsx` files, and the change to the data will be reflected automatically. This is a minor annoyance to watch out for when changed files in the `src/data` folder.
+- Changes to files in `src/data` will not be reflected in development mode. However you do not have to restart the process of `npm run start`, you can simply do a save command on any of the `.ts` or `.tsx` files, and the change to the data will be reflected automatically. This is a minor annoyance to watch out for when changing files in the `src/data` folder.
 
 - Images of levels and Miis can be automatically generated with the command `npm run build:images`. This will create the folder `scripts/makerImages` and `scripts/levelImages` from the original images located in `scripts/makers` and `scripts/levels`. The filenames must correspond with the levels names using the snake_case format. The contents of the generated folders must be copied over to the `public` directory. The generated `*Images.bundle.js` files are not needed and may be deleted/not copied over. You can find the original images on the Google Drive. If there are new images here, place them in `scripts/makers` and `scripts/levels` respectively, then run the command `npm run build:images`, and copy over the generated images to the `public` folder.
 
@@ -67,5 +67,5 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-(Note info about what the commands do over from the orignal `create-react-app` `README.md` file. However, instead of ejecting, `craco` is used to alter configuration without ejecting.)
+(Note info about what the commands do over from the orignal `create-react-app` `README.md` file. However, instead of ejecting, `craco` is used to alter configuration without ejecting. Please never run eject.)
 
