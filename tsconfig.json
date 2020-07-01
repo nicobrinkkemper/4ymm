@@ -6,6 +6,12 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": [
+      "jest", 
+      "node",
+      "webpack-env"
+    ],
+    "baseUrl": "src",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +23,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "rootDir": "src",
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "src/mdx.d.ts"
   ]
 }
