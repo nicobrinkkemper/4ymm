@@ -9,6 +9,24 @@
 - `npm run start` - run development mode
 - OR `npm run build` - build final product in `build folder`
 
+## Update level codes
+- download csv from this page https://docs.google.com/spreadsheets/d/1i_Cmbj3GTKtrIgm4tVGLrF0lwrVeVZCsRdSdlR3qYiw/edit#gid=0
+- replace csv in `src/data`
+
+## Add images
+- Download images https://drive.google.com/drive/folders/1a8aEUBZau-hekxB82sJR-gmWoNPFBVkg
+- Add to `scripts/levels` and `scripts/makers`
+- `npm run build:images`
+- Copy over folders `makerImages` and `levelImages` to `public folder`
+
+## Change copy
+- Download `.mdx` file https://drive.google.com/drive/folders/1Bs1onyjbBDgdPFYyCG3DFzki-kTIuFcw
+- Replace `.mdx` file in `src/data`
+
+## Upload with FTP
+- `npm run build`
+- upload build folder to ftp with your preferred FTP program
+
 ## General information about the source code
 
 See below `Available Scripts` to get you up and running. These scripts correspond to the ones specified in `package.json`. A few things to keep in mind before starting the work on the project:
@@ -62,6 +80,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run build:images`
 
 This is a custom script made by Geitje to resize and compress all the images needed for the levels and Miis. Run this command, then copy over all the images to the public folder. You do not need the .js bundles in these folders, feel free to remove.
+
+### ``npm run serve`
+
+This will start a server running on the `build` folder. This will reflect more accurately the final product of the site, but does not allow hot-reloading like `npm run start` does.
+
 
 ### `npm run eject`
 

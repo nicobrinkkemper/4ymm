@@ -22,9 +22,6 @@ import YouTube from 'react-youtube';
 import About from 'About';
 import Teaser from 'Teaser';
 
-const FS_ORG_ID = 'W54CA'; // Fill this in here
-const FS_NAMESPACE = 'FULLSTORY'; // Fill this in here
-
 const Welcome = importMDX.sync('./data/Welcome.mdx')
 
 const BackButton = () => {
@@ -141,7 +138,6 @@ function App() {
     )
   return (
     <div className="App" style={showAbout ? { overflowY: 'hidden', maxHeight: '100vh' } : {}}>
-      
       <div className="ie-fixMinHeight">
         {routes}
         <About />
@@ -156,11 +152,11 @@ function App() {
 }
 
 const AppWrapper = () => (
-  <Router>
-    <div className="App-wrapper">
-      <App />
-    </div>
-  </Router>
+    <Router>
+      <div className="App-wrapper">
+        <App />
+      </div>
+    </Router>
 )
 
 export default AppWrapper;
