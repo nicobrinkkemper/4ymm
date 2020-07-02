@@ -3,9 +3,7 @@ declare module 'react-snapshot' {
     import * as ReactDOM from 'react-dom';
     let render: ReactDOM.Renderer;
   }
-declare module './data/4YMM Info Sheet - Sheet1.csv' {
-  
-}
+declare module "./data/*.csv";
 declare module 'mdx.macro' {
   import {importMDX} from 'mdx.macro'
   let importMDX: any;

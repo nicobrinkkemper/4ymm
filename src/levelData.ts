@@ -1,7 +1,6 @@
 import memoizeOne from 'memoize-one';
-//@ts-ignore
 import data from "./data/4YMM Info Sheet - Sheet1.csv"
-export const startDateString = '28 Jun 2020 15:00:00 GMT'
+const startDateString = '28 Jun 2020 15:00:00 GMT'
 export const startDate = new Date(Date.parse(startDateString))
 export const releaseDays = [
     startDate,
@@ -10,12 +9,8 @@ export const releaseDays = [
     new Date(Date.parse('19 Jul 2020 15:00:00 GMT')),
     new Date(Date.parse('26 Jul 2020 15:00:00 GMT')),
 ]
-// export const todayStart: Date = function () {
-//     const d = new Date();
-//     d.setHours(0, 0, 0, 0);
-//     return d
-// }()
 
+// add any field here from the csv headers to make it a valid level value
 export type level = {
     order: number;
     batchNumber: number;
@@ -27,10 +22,10 @@ export type level = {
     difficulty: number;
     tags: string;
     levelCode: string;
-    batchLength?:number;
-    batchIndex?:number;
+    batchLength?: number;
+    batchIndex?: number;
 }
-export type levelData = {
+type levelData = {
     level: (order: number) => level;
     levels: (batchNumber: number) => level[];
     batch: (batchNumber: number) => string[][];
@@ -60,7 +55,7 @@ enum csvHeaders {
     "nationality",
     "levelCode",
 }
-const createLevel = (levelRow: string[], index?:number, arr?:string[][])=>(
+const createLevel = (levelRow: string[], index?: number, arr?: string[][])=>(
     {
         order:  Number(levelRow[csvHeaders['order']]),
         batchNumber: Number(levelRow[csvHeaders['batchNumber']]),
@@ -76,7 +71,7 @@ const createLevel = (levelRow: string[], index?:number, arr?:string[][])=>(
         batchIndex: (typeof index === 'number') ? index : undefined,
     }
 )
-export const isReleased = (releaseDay:Date)=>releaseDay.getTime() <= Date.now() //
+export const isReleased = (releaseDay: Date)=>releaseDay.getTime() <= Date.now() //
 export const getLevelData = memoizeOne(() => {
     const [header,...levelRows] = (data as [keyof typeof csvHeaders, ...string[][]])
     // here we do a check if all headers are still correct
@@ -90,6 +85,7 @@ export const getLevelData = memoizeOne(() => {
     const newestBatch = releaseDays.indexOf(releasedBatches.sort((a, b) => {
         return (Date.now() - a.getTime()) - (Date.now() - b.getTime())
     })[0])
+    // utility function for components to use
     const batch = (batchNumber: number)=>{
         if(typeof batchNumber !== 'number') throw(new TypeError('batchNumber should be number'))
         return levelRows.filter(level=>Number(level[csvHeaders['batchNumber']]) === batchNumber)
@@ -100,9 +96,6 @@ export const getLevelData = memoizeOne(() => {
     }
     const levels = (batchNumber: number)=>{
         if(typeof batchNumber !== 'number') throw(new TypeError('batchNumber should be number'))
-        levelRows.filter(level=>{
-            return Number(level[csvHeaders['batchNumber']]) === batchNumber
-        })
         return batch(batchNumber).map(createLevel)
     }
     return {    
