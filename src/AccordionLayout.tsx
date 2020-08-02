@@ -23,7 +23,7 @@ export const accordionComponents = {
     blockquote: function(uuid){
         return (props: PropsWithChildren<{ key: any }>) => {
             return (
-                <AccordionItem uuid={uuid++}>
+                <AccordionItem uuid={String(uuid++)}>
                     {props.children}
                 </AccordionItem>
             )
@@ -31,6 +31,6 @@ export const accordionComponents = {
     }(0)
 }
 const AccordionLayout = ({ children }: PropsWithChildren<{}>) => (
-    <Accordion preExpanded={[0]}>{children}</Accordion>
+    <Accordion preExpanded={[String(0)]}>{children}</Accordion>
 )
 export default AccordionLayout
