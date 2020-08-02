@@ -8,6 +8,9 @@ export const releaseDays = [
     new Date(Date.parse('12 Jul 2020 15:00:00 GMT')),
     new Date(Date.parse('19 Jul 2020 15:00:00 GMT')),
     new Date(Date.parse('26 Jul 2020 15:00:00 GMT')),
+    new Date(Date.parse('2 Aug 2020 15:00:00 GMT')),
+    new Date(Date.parse('9 Aug 2020 15:00:00 GMT')),
+    new Date(Date.parse('16 Aug 2020 15:00:00 GMT')),
 ]
 
 // add any field here from the csv headers to make it a valid level value

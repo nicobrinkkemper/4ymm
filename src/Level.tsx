@@ -54,7 +54,7 @@ function Level() {
               } />
               <img src={`./levelImages/${transformName(level.levelName)}-480.png`} style={{ width: '100%', objectFit: 'cover' }} alt="level screenshot" />
             </picture>
-            <div className="levelCode">{level.levelCode}</div>
+            <div className="levelCode">{level.levelCode || "Code coming soon"}</div>
             <div className="levelInfo">
               <div className={"tags"}>
                 {tags.map((tag, i) => <span className="tag" key={i.toString()}>{tag}</span>)}
@@ -64,7 +64,7 @@ function Level() {
                 <span>Difficulty: </span><span className={`stars stars-${level.difficulty}`}><Stars value={level.difficulty} /></span>
               </div>
             </div>
-          <p className="description">{level.description}</p>
+          <p className="description" >{level.description}</p>
           </div>
 
         </div>
@@ -83,7 +83,7 @@ function Level() {
             <span className={`nationality flag-icon flag-icon-${lowerCase(level.nationality)}`} />
             <span className="name">{level.makerName}</span>
           </div>
-        <p className="makerDescription">{level.makerDescription}</p>
+        <p className="makerDescription" style={{whiteSpace:'pre-line'}}>{level.makerDescription}</p>
         </div></div>
       </Card>
       <div className={navigationClasslist.join(" ")}>

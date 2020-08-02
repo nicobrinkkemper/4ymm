@@ -37,7 +37,11 @@ const BackButton = () => {
 
 const weekTrailers = [
   "iY6Qj6L_oF0",
-  "WUWn1gQIs_8"
+  "WUWn1gQIs_8",
+  "AdKyII4NjvQ",
+  "PBVWDbYInLw",
+  "SbYdb2UvH78",
+  "riPeVvp6Zzo"
 ]
 const WeekTrailer = () => {
   const { batchNumber } = useParams()

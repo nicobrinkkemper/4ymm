@@ -13,6 +13,7 @@
 }
 .makerDescription{
     padding-top:1rem;
+    white-space:pre-line;
 }
 
 .Level .makerCard{
@@ -86,6 +87,7 @@
   }
 
 .Level .description{
+    white-space:pre-line;
     padding-top:1rem;
 }
 .Level .Button.arrow-left{

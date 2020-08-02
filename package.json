@@ -9,6 +9,7 @@
     "@fullstory/browser": "^1.4.4",
     "@material-ui/core": "^4.10.2",
     "@mdx-js/react": "^1.6.6",
+    "@mdx-js/runtime": "^1.6.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -38,6 +39,7 @@
     "test": "craco  test",
     "eject": "react-scripts eject",
     "build:images": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig.json\" webpack --config ./scripts/webpack.config.ts",
+    "copy:images": "rm ./scripts/makerImages/makerImages.bundle.js; rm ./scripts/levelImages/levelImages.bundle.js; cp -R scripts/levelImages public; cp -R scripts/makerImages public",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "eslintConfig": {
