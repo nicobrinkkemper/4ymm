@@ -1,7 +1,7 @@
-const { getLoader, loaderByName } = require('@craco/craco');
+const { loaderByName } = require('@craco/craco');
 const { addBeforeLoader } = require('@craco/craco/lib/loaders');
 module.exports = {
-  overrideWebpackConfig: ({ webpackConfig, cracoConfig, options }) => {
+  overrideWebpackConfig: ({ webpackConfig, options }) => {
     const config = { ...webpackConfig };
     const csvLoader = {
       test: /\.csv$/,

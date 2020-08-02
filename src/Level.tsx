@@ -54,7 +54,7 @@ function Level() {
               } />
               <img src={`./levelImages/${transformName(level.levelName)}-480.png`} style={{ width: '100%', objectFit: 'cover' }} alt="level screenshot" />
             </picture>
-            <div className="levelCode">{level.levelCode}</div>
+            <div className="levelCode">{level.levelCode || "Code coming soon"}</div>
             <div className="levelInfo">
               <div className={"tags"}>
                 {tags.map((tag, i) => <span className="tag" key={i.toString()}>{tag}</span>)}
