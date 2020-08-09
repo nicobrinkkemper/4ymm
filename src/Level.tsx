@@ -9,16 +9,16 @@ import Stars from 'Stars';
 import Button from 'Button';
 
 function Level() {
-  const { batchNumber:strBatchNumber, order:strOrder } = useParams();
+  const { batchNumber: strBatchNumber, order: strOrder } = useParams();
   const order = Number(strOrder);
   const levelData = getLevelData()
   const batchLevels = levelData.levels(Number(strBatchNumber))
-  const level = batchLevels.find(({order:_order})=>_order===order)
+  const level = batchLevels.find(({ order: _order }) => _order === order)
   if (typeof level !== 'object') return <span>There is nothing here.</span>
   const startOrder = batchLevels[0].order;
-  const endOrder = batchLevels[batchLevels.length-1].order;
+  const endOrder = batchLevels[batchLevels.length - 1].order;
   const batchNumber = Number(level.batchNumber);
-  if(Number(strBatchNumber) !== level.batchNumber)  return <span>A problem occured. Please come back later.</span>
+  if (Number(strBatchNumber) !== level.batchNumber) return <span>A problem occured. Please come back later.</span>
   const releaseDay = releaseDays[batchNumber - 1]
   const classList = ["Level"];
   const isNew = levelData.newestBatch === batchNumber - 1
@@ -27,11 +27,11 @@ function Level() {
   const levelPath = (levelName: string, width = 480) => `./levelImages/${transformName(levelName)}-${width}.png`
   const makerPath = (makerName: string, width = 500) => `./makerImages/${transformName(makerName)}-${width}.png`
   const tags = level.tags.split(',');
-  const hasPreviousLevel = Number(order)>startOrder;
+  const hasPreviousLevel = Number(order) > startOrder;
   const hasNextLevel = endOrder > Number(order);
   const navigationClasslist = ['navigation']
-  if(hasPreviousLevel) navigationClasslist.push('hasPreviousLevel')
-  if(hasNextLevel) navigationClasslist.push('hasNextLevel')
+  if (hasPreviousLevel) navigationClasslist.push('hasPreviousLevel')
+  if (hasNextLevel) navigationClasslist.push('hasNextLevel')
   if (isNew) classList.push('isNew')
   if (isUnreleased) return <span>This level hasn't been released yet</span>
   return (
@@ -64,7 +64,7 @@ function Level() {
                 <span>Difficulty: </span><span className={`stars stars-${level.difficulty}`}><Stars value={level.difficulty} /></span>
               </div>
             </div>
-          <p className="description" >{level.description}</p>
+            <p className="description">{level.description}</p>
           </div>
 
         </div>
@@ -72,23 +72,23 @@ function Level() {
       <Card>
         <div className="makerCard">
           <div className="info">
-        <picture className="mii">
-          <source srcSet={`
+            <picture className="mii">
+              <source srcSet={`
               ${makerPath(level.makerName, 250)} 250w,
               ${makerPath(level.makerName, 500)} 500w,
           `} />
-          <img src={`./makerImages/${transformName(level.makerName)}-500.png`} style={{ height: '6.125rem', width: '6.125rem', objectFit: 'cover' }}  alt="maker's mii screenshot" />
-        </picture>
-          <div className={"makerName"}>
-            <span className={`nationality flag-icon flag-icon-${lowerCase(level.nationality)}`} />
-            <span className="name">{level.makerName}</span>
-          </div>
-        <p className="makerDescription" style={{whiteSpace:'pre-line'}}>{level.makerDescription}</p>
-        </div></div>
+              <img src={`./makerImages/${transformName(level.makerName)}-500.png`} style={{ height: '6.125rem', width: '6.125rem', objectFit: 'cover' }} alt="maker's mii screenshot" />
+            </picture>
+            <div className={"makerName"}>
+              <span className={`nationality flag-icon flag-icon-${lowerCase(level.nationality)}`} />
+              <span className="name">{level.makerName}</span>
+            </div>
+            <p className="makerDescription" style={{ whiteSpace: 'pre-line' }}>{level.makerDescription}</p>
+          </div></div>
       </Card>
       <div className={navigationClasslist.join(" ")}>
-      {hasPreviousLevel ? <Button icon="arrow-left" iconPosition="left" to={`/level/${Number(batchNumber)}/${Number(order)-1}`}></Button> : null}
-      {hasNextLevel ? <Button icon="arrow-right" to={`/level/${Number(batchNumber)}/${Number(order)+1}`}>Next level</Button> : null}
+        {hasPreviousLevel ? <Button icon="arrow-left" iconPosition="left" to={`/level/${Number(batchNumber)}/${Number(order) - 1}`}></Button> : null}
+        {hasNextLevel ? <Button icon="arrow-right" to={`/level/${Number(batchNumber)}/${Number(order) + 1}`}>Next level</Button> : null}
       </div>
     </div>
   )

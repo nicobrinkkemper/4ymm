@@ -41,7 +41,8 @@ const weekTrailers = [
   "AdKyII4NjvQ",
   "PBVWDbYInLw",
   "SbYdb2UvH78",
-  "riPeVvp6Zzo"
+  "riPeVvp6Zzo",
+  "8zSCJDWJUvM"
 ]
 const WeekTrailer = () => {
   const { batchNumber } = useParams()

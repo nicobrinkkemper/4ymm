@@ -15,9 +15,9 @@
 
 ## Add images
 - Download images https://drive.google.com/drive/folders/1a8aEUBZau-hekxB82sJR-gmWoNPFBVkg
-- Add to `scripts/levels` and `scripts/makers`
-- `npm run build:images`
-- Copy over folders `makerImages` and `levelImages` to `public folder`
+- Add new images to `scripts/levels` and `scripts/makers`
+- `npm run build:images` this command generates all the images and puts it in `scripts/levelImages` and `scripts/makerImages`
+- `npm run copy:images` this command copies over folders `makerImages` and `levelImages` to `public folder` and removes the js files in those folders
 
 ## Change copy
 - Download `.mdx` file https://drive.google.com/drive/folders/1Bs1onyjbBDgdPFYyCG3DFzki-kTIuFcw
