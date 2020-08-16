@@ -45,9 +45,7 @@ export default function Button({ children, primary, icon, to, inverted = false, 
     const classList = ['Button', icon]
     if (primary) classList.push('primary')
     if (inverted) classList.push('inverted')
-    if (typeof icons[icon] === 'string') { 
-        classList.push('hasIcon')
-    }
+    if (typeof icons[icon] === 'string') classList.push('hasIcon')
     if (iconPosition === 'left') classList.push('iconIsLeft')
     const props = {
         to,
