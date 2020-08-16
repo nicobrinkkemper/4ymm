@@ -39,13 +39,15 @@ See below `Available Scripts` to get you up and running. These scripts correspon
 
 - The files ending with `.mdx` located in `src/data` can be used to update the copy of the website. These files work the same as the `.csv` file located in `src/data`, meaning the `.mdx` files are also incoorporated in the final bundle in the `build` folder. You can find these files on the Google Drive.
 
-- Futher changes to release dates and level data can be made in the file `src/levelData.ts`. This file acts as a sort-of runtime database, and offers some uttility functions to extract meaningfull data from the `.csv` file. Components of the App use this file to statically import data from the spreadsheet. (no async stuff whatsoever) Any date changed here will reflect when each batch will be relaesed, and may be changed individually. This can be usefull to preview the site, by changing the dates you are able to see how things will look like once the levels are released.
+- Futher changes to release dates and level data can be made in the file `src/levelData.ts`. This file acts as a sort-of runtime database, and offers some uttility functions to extract meaningfull data from the `.csv` file. Components of the App use this file to statically import data from the spreadsheet. (no async stuff whatsoever) Any date changed here will reflect when each batch will be released, and may be changed individually. This can be usefull to preview the site, by changing the dates you are able to see how things will look like once the levels are released.
 
 - `Craco` is used to *hack* `create-react-app` to enable `.csv` reading abilities, allowing us to statically read the `.csv` contents as it would be a `.json` file. This eliminates any asynchronous loading of data, and let's us do static rendering of pages to `.html` files.
 
 - Changes to files in `src/data` will not be reflected in development mode. However you do not have to restart the process of `npm run start`, you can simply do a save command on any of the `.ts` or `.tsx` files, and the change to the data will be reflected automatically. This is a minor annoyance to watch out for when changing files in the `src/data` folder.
 
 - Images of levels and Miis can be automatically generated with the command `npm run build:images`. This will create the folder `scripts/makerImages` and `scripts/levelImages` from the original images located in `scripts/makers` and `scripts/levels`. The filenames must correspond with the levels names using the snake_case format. The contents of the generated folders must be copied over to the `public` directory. The generated `*Images.bundle.js` files are not needed and may be deleted/not copied over. You can find the original images on the Google Drive. If there are new images here, place them in `scripts/makers` and `scripts/levels` respectively, then run the command `npm run build:images`, and copy over the generated images to the `public` folder.
+
+- To copy over images to the public folder and delete the redundant javascript files in the image folders, you can run the command `npm run move:images`. This command only works on unix machines. This should be the only command that doesn't work on Window's commandline. If you insist on working on Windows, this step should be performed manually, or WSL should be used. (I recommend WSL for Windows users)
 
 ## Available Scripts
 
@@ -79,14 +81,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run build:images`
 
-This is a custom script made by Geitje to resize and compress all the images needed for the levels and Miis. Run this command, then copy over all the images to the public folder. You do not need the .js bundles in these folders, feel free to remove.
+This is a custom script to resize and compress all the images needed for the levels and Miis. Run this command, then copy over all the images to the public folder. You do not need the .js bundles in these folders, feel free to remove.
 
-### ``npm run serve`
+### `npm run move:images`
+
+This is a unix command to remove all the unneccary Javascript files and move all the generated images to the public folder.
+
+### `npm run serve`
 
 This will start a server running on the `build` folder. This will reflect more accurately the final product of the site, but does not allow hot-reloading like `npm run start` does.
 
-
-### `npm run eject`
+### `npm run never_run_eject_please`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -96,5 +101,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-(Note info about what the commands do over from the orignal `create-react-app` `README.md` file. However, instead of ejecting, `craco` is used to alter configuration without ejecting. Please never run eject.)
+
+## Craco
+Instead of ejecting the react app to customize webpack behavior, `craco` is used to alter configuration without ejecting. Please never run eject, as you are already able to customize the behavior through `craco`. This is used so that `.csv` files can be easily imported and parsed during compile time. Webpack will read the csv file, and the contents will be available as a JSON object when you import csv files as such `import data from 'MY_CSV_FILE.csv'`
 

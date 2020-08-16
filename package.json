@@ -37,7 +37,7 @@
     "prebuild": "craco  build",
     "snapshot": "react-snapshot --build-dir build",
     "test": "craco  test",
-    "eject": "react-scripts eject",
+    "never_run_eject_please": "react-scripts eject",
     "build:images": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig.json\" webpack --config ./scripts/webpack.config.ts",
     "move:images": "rm ./scripts/makerImages/makerImages.bundle.js; rm ./scripts/levelImages/levelImages.bundle.js; cp -R scripts/levelImages public; cp -R scripts/makerImages public; rm -rf scripts/levelImages; rm -rf scripts/makerImages;",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
